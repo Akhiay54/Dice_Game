@@ -1,4 +1,4 @@
-/*
+/* Akky
 GAME RULES:
 - The game has 2 players, playing in rounds
 - In each turn, a player rolls a dice as many times as he whishes. Each result get added to his ROUND score
@@ -54,12 +54,7 @@ document.querySelector('.dice').src = 'dice-'+dice+'.png';
          }
        }
      });
-
     document.querySelector('.btn-new').addEventListener('click',init);
-
-document.querySelector('.author').addEventListener('click',function(){
-  alert('GAME RULES:\n   - The game has 2 players, playing in rounds \n - In each turn, a player rolls a dice as many times as he whishes. Each result get added to his ROUND score \n - BUT, if the player rolls a 1, all his ROUND score gets lost. After that, its the next players turn \n - The player can choose to Hold, which means that his ROUND score gets added to his GLBAL score. After that, it\'s the next player\'s turn \n - The first player to reach 100 points on GLOBAL score wins the game. ');
-});
 // nextplayer_turn
   function nextplayer_turn(){
     document.querySelector('#current-'+activeplayer).textContent=0;
@@ -71,6 +66,10 @@ document.querySelector('.author').addEventListener('click',function(){
     document.querySelector('.dice').style.display='none';
   }
 
+
+document.querySelector('.author').addEventListener('click',function(){
+  alert('GAME RULES:\n   - The game has 2 players, playing in rounds \n - In each turn, a player rolls a dice as many times as he whishes. Each result get added to his ROUND score \n - BUT, if the player rolls a 1, all his ROUND score gets lost. After that, its the next players turn \n - The player can choose to Hold, which means that his ROUND score gets added to his GLBAL score. After that, it\'s the next player\'s turn \n - The first player to reach 100 points on GLOBAL score wins the game. ');
+});
 // restart the game
   function init(){
     countrolls=0;
